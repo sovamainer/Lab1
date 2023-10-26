@@ -5,7 +5,7 @@
 using namespace std;
 
 int sizes(int number_choise) {
-	cout << "Âûáðàíà êîìàíäà: " << number_choise << "\n\n";
+	cout << "Ð’Ñ‹Ð±Ñ€Ð°Ð½Ð° ÐºÐ¾Ð¼Ð°Ð½Ð´Ð°: " << number_choise << "\n\n";
 	cout << "int: " << sizeof(int) << "\n";
 	cout << "short int: " << sizeof(short int) << "\n";
 	cout << "long int: " << sizeof(long int) << "\n";
@@ -19,13 +19,13 @@ int sizes(int number_choise) {
 
 
 int bin_Int(int number_choise) {
-	cout << "Âûáðàíà êîìàíäà: " << number_choise << "\n\n";
+	cout << "Ð’Ñ‹Ð±Ñ€Ð°Ð½Ð° ÐºÐ¾Ð¼Ð°Ð½Ð´Ð°: " << number_choise << "\n\n";
 	unsigned int bytes = 32, masks = 1 << bytes - 1, int_num;
 	int A1[32] = {};
-	cout << "Ââåäèòå öåëîå ÷èñëî\n";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ†ÐµÐ»Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾\n";
 
 	while (!(cin >> int_num)) {
-		cout << "Îøèáêà, ââåäåí íåïîäõîäÿùèé òèï äàííûõ\n";
+		cout << "ÐžÑˆÐ¸Ð±ÐºÐ°, Ð²Ð²ÐµÐ´ÐµÐ½ Ð½ÐµÐ¿Ð¾Ð´Ñ…Ð¾Ð´ÑÑ‰Ð¸Ð¹ Ñ‚Ð¸Ð¿ Ð´Ð°Ð½Ð½Ñ‹Ñ…\n";
 		cin.clear();
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	}
@@ -40,20 +40,20 @@ int bin_Int(int number_choise) {
 			cout << (i == 0 || i % 8 == 0 ? " " : "");
 		}
 
-		cout << "\nÏîìåíÿòü ìåñòàìè çàäàííûå ïîëüçîâàòåëåì áèòû\n"
-			"[1]ÄÀ\n"
-			"[2]ÍÅÒ\n";
+		cout << "\nÐŸÐ¾Ð¼ÐµÐ½ÑÑ‚ÑŒ Ð¼ÐµÑÑ‚Ð°Ð¼Ð¸ Ð·Ð°Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÐµÐ¼ Ð±Ð¸Ñ‚Ñ‹\n"
+			"[1]Ð”Ð\n"
+			"[2]ÐÐ•Ð¢\n";
 
 		int choises, a1, a2, temp, s = 0;
 
 		while (!(cin >> choises)) {
-			cout << "Îøèáêà, ââåäåí íåïîäõîäÿùèé òèï äàííûõ\n";
+			cout << "ÐžÑˆÐ¸Ð±ÐºÐ°, Ð²Ð²ÐµÐ´ÐµÐ½ Ð½ÐµÐ¿Ð¾Ð´Ñ…Ð¾Ð´ÑÑ‰Ð¸Ð¹ Ñ‚Ð¸Ð¿ Ð´Ð°Ð½Ð½Ñ‹Ñ…\n";
 			cin.clear();
 			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		}
 
 		if (choises == 1) {
-			cout << "Êàêèå ýëåìåíòû ïîìåíÿòü ìåñòàìè? ";
+			cout << "ÐšÐ°ÐºÐ¸Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ Ð¿Ð¾Ð¼ÐµÐ½ÑÑ‚ÑŒ Ð¼ÐµÑÑ‚Ð°Ð¼Ð¸? ";
 			cin >> a1 >> a2;
 			if (a1 < a2) {
 				temp = A1[a1 - 1];
@@ -77,13 +77,13 @@ int bin_Int(int number_choise) {
 				s = s + (A1[i] * pow(2, (bytes - 1 - i)));
 			}
 
-			cout << "Èçìåíåííîå ÷èñëî: " << s << "\n";
+			cout << "Ð˜Ð·Ð¼ÐµÐ½ÐµÐ½Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾: " << s << "\n";
 		}
-		cout << "Ââåäèòå ÷èñëî: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾: ";
 		cout << "\n";
 		
 		while (!(cin >> int_num)) {
-			cout << "Îøèáêà, ââåäåí íåïîäõîäÿùèé òèï äàííûõ\n";
+			cout << "ÐžÑˆÐ¸Ð±ÐºÐ°, Ð²Ð²ÐµÐ´ÐµÐ½ Ð½ÐµÐ¿Ð¾Ð´Ñ…Ð¾Ð´ÑÑ‰Ð¸Ð¹ Ñ‚Ð¸Ð¿ Ð´Ð°Ð½Ð½Ñ‹Ñ…\n";
 			cin.clear();
 			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		}
@@ -94,7 +94,7 @@ int bin_Int(int number_choise) {
 }
 
 int bin_Float(int number_choise) {
-	cout << "Âûáðàíà êîìàíäà: " << number_choise << "\n\n";
+	cout << "Ð’Ñ‹Ð±Ñ€Ð°Ð½Ð° ÐºÐ¾Ð¼Ð°Ð½Ð´Ð°: " << number_choise << "\n\n";
 	union
 	{
 		int int_Float;
@@ -102,11 +102,11 @@ int bin_Float(int number_choise) {
 	};
 	unsigned int bites = sizeof(int) * 8, mask = 1 << bites - 1;
 	int A1[32] = {};
-	cout << "Ââåäèòå âåùåñòâåííîå ÷èñëî\n";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð²ÐµÑ‰ÐµÑÑ‚Ð²ÐµÐ½Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾\n";
 	cin >> float_Num;
 
 	while (!(cin >> float_Num)) {
-		cout << "Îøèáêà, ââåäåí íåïîäõîäÿùèé òèï äàííûõ\n";
+		cout << "ÐžÑˆÐ¸Ð±ÐºÐ°, Ð²Ð²ÐµÐ´ÐµÐ½ Ð½ÐµÐ¿Ð¾Ð´Ñ…Ð¾Ð´ÑÑ‰Ð¸Ð¹ Ñ‚Ð¸Ð¿ Ð´Ð°Ð½Ð½Ñ‹Ñ…\n";
 		cin.clear();
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	}
@@ -122,21 +122,21 @@ int bin_Float(int number_choise) {
 				putchar(' ');
 		}
 
-		cout << "\nÏîìåíÿòü ìåñòàìè çàäàííûå ïîëüçîâàòåëåì áèòû\n"
-			"[1]ÄÀ\n"
-			"[2]ÍÅÒ\n";
+		cout << "\nÐŸÐ¾Ð¼ÐµÐ½ÑÑ‚ÑŒ Ð¼ÐµÑÑ‚Ð°Ð¼Ð¸ Ð·Ð°Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÐµÐ¼ Ð±Ð¸Ñ‚Ñ‹\n"
+			"[1]Ð”Ð\n"
+			"[2]ÐÐ•Ð¢\n";
 
 		int choises, a1, a2, temp;
 		float s = 0;
 
 		while (!(cin >> choises)) {
-			cout << "Îøèáêà, ââåäåí íåïîäõîäÿùèé òèï äàííûõ\n";
+			cout << "ÐžÑˆÐ¸Ð±ÐºÐ°, Ð²Ð²ÐµÐ´ÐµÐ½ Ð½ÐµÐ¿Ð¾Ð´Ñ…Ð¾Ð´ÑÑ‰Ð¸Ð¹ Ñ‚Ð¸Ð¿ Ð´Ð°Ð½Ð½Ñ‹Ñ…\n";
 			cin.clear();
 			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		}
 
 		if (choises == 1) {
-			cout << "Êàêèå ýëåìåíòû ïîìåíÿòü ìåñòàìè? ";
+			cout << "ÐšÐ°ÐºÐ¸Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ Ð¿Ð¾Ð¼ÐµÐ½ÑÑ‚ÑŒ Ð¼ÐµÑÑ‚Ð°Ð¼Ð¸? ";
 			cin >> a1 >> a2;
 			if (a1 < a2) {
 				temp = A1[a1 - 1];
@@ -160,13 +160,13 @@ int bin_Float(int number_choise) {
 				s = s + (A1[i] * pow(2, (bites - 1 - i)));
 			}
 
-			cout << "Èçìåíåííîå ÷èñëî: " << s << "\n";
+			cout << "Ð˜Ð·Ð¼ÐµÐ½ÐµÐ½Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾: " << s << "\n";
 		}
-		cout << "Ââåäèòå ÷èñëî: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾: ";
 		cout << "\n";
 
 		while (!(cin >> float_Num)) {
-			cout << "Îøèáêà, ââåäåí íåïîäõîäÿùèé òèï äàííûõ\n";
+			cout << "ÐžÑˆÐ¸Ð±ÐºÐ°, Ð²Ð²ÐµÐ´ÐµÐ½ Ð½ÐµÐ¿Ð¾Ð´Ñ…Ð¾Ð´ÑÑ‰Ð¸Ð¹ Ñ‚Ð¸Ð¿ Ð´Ð°Ð½Ð½Ñ‹Ñ…\n";
 			cin.clear();
 			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		}
@@ -183,19 +183,19 @@ int main()
 	double number = 1;
 	setlocale(LC_ALL, "RU");
 	while (number != 0) {
-		cout << "Ââåäèòå íîìåð êîìàíäû:\n"
-			"[1]Âûâîä ðàçìåðíîñòè òèïîâ äàííûõ.\n"
-			"[2]Âûâîä äâîè÷íîé çàïèñè öåëîãî ÷èñëà â ïðåäñòàâëåíèè ïàìÿòè.\n"
-			"[3]Âûâîä äâîè÷íîé çàïèñè âåùåñòâåííîãî ÷èñëà â ïðåäñòàâëåíèè ïàìÿòè.\n"
-			"[0]Âûõîä èç ïðîãðàììû.\n";
-		cout << "Êîìàíäà ¹: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ ÐºÐ¾Ð¼Ð°Ð½Ð´Ñ‹:\n"
+			"[1]Ð’Ñ‹Ð²Ð¾Ð´ Ñ€Ð°Ð·Ð¼ÐµÑ€Ð½Ð¾ÑÑ‚Ð¸ Ñ‚Ð¸Ð¿Ð¾Ð² Ð´Ð°Ð½Ð½Ñ‹Ñ….\n"
+			"[2]Ð’Ñ‹Ð²Ð¾Ð´ Ð´Ð²Ð¾Ð¸Ñ‡Ð½Ð¾Ð¹ Ð·Ð°Ð¿Ð¸ÑÐ¸ Ñ†ÐµÐ»Ð¾Ð³Ð¾ Ñ‡Ð¸ÑÐ»Ð° Ð² Ð¿Ñ€ÐµÐ´ÑÑ‚Ð°Ð²Ð»ÐµÐ½Ð¸Ð¸ Ð¿Ð°Ð¼ÑÑ‚Ð¸.\n"
+			"[3]Ð’Ñ‹Ð²Ð¾Ð´ Ð´Ð²Ð¾Ð¸Ñ‡Ð½Ð¾Ð¹ Ð·Ð°Ð¿Ð¸ÑÐ¸ Ð²ÐµÑ‰ÐµÑÑ‚Ð²ÐµÐ½Ð½Ð¾Ð³Ð¾ Ñ‡Ð¸ÑÐ»Ð° Ð² Ð¿Ñ€ÐµÐ´ÑÑ‚Ð°Ð²Ð»ÐµÐ½Ð¸Ð¸ Ð¿Ð°Ð¼ÑÑ‚Ð¸.\n"
+			"[0]Ð’Ñ‹Ñ…Ð¾Ð´ Ð¸Ð· Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñ‹.\n";
+		cout << "ÐšÐ¾Ð¼Ð°Ð½Ð´Ð° â„–: ";
 		while (!(cin >> number)) {
-			cout << "Îøèáêà, ââåäåí íåïîäõîäÿùèé òèï äàííûõ\n";
+			cout << "ÐžÑˆÐ¸Ð±ÐºÐ°, Ð²Ð²ÐµÐ´ÐµÐ½ Ð½ÐµÐ¿Ð¾Ð´Ñ…Ð¾Ð´ÑÑ‰Ð¸Ð¹ Ñ‚Ð¸Ð¿ Ð´Ð°Ð½Ð½Ñ‹Ñ…\n";
 			cin.clear();
 			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		}
 		int number_choise = floor(number);
-		cout << "Ïðèíÿòà êîìàíäà: " << number_choise;
+		cout << "ÐŸÑ€Ð¸Ð½ÑÑ‚Ð° ÐºÐ¾Ð¼Ð°Ð½Ð´Ð°: " << number_choise;
 		cout << "\n";
 		if (number_choise == 1 || number_choise == 2 || number_choise == 3 || number_choise == 0) {
 
@@ -226,13 +226,9 @@ int main()
 		}
 		else
 		{
-			cout << "Ââåäèòå ÷èñëî èç äèàïàçîíà öèôð 0 - 3\n\n";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾ Ð¸Ð· Ð´Ð¸Ð°Ð¿Ð°Ð·Ð¾Ð½Ð° Ñ†Ð¸Ñ„Ñ€ 0 - 3\n\n";
 			system("pause");
 		}
 		system("cls");
 	}
 }
-
-
-
-	
