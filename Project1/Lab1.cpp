@@ -18,12 +18,15 @@ int sizes(int number_choise) {
 }
 
 // Функция для перевода числа типа int в двоичную систему счисления(с учетом ИДЗ)
+
 int bin_Int(int number_choise) {
 	cout << "Выбрана команда: " << number_choise << "\n\n";
 	unsigned int bytes = 32, masks = 1 << bytes - 1, int_num;
 	int A1[32] = {};
 	cout << "Введите целое число\n";
+	
 // Этот блок кода делает проверку на символ, вводимый пользователем
+	
 	while (!(cin >> int_num)) {
 		cout << "Ошибка, введен неподходящий тип данных\n";
 		cin.clear();
@@ -92,7 +95,9 @@ int bin_Int(int number_choise) {
 	}
 	return 0;
 }
+
 // Функция для перевода числа типа float в двоичную систему счисления(с учетом ИДЗ)
+
 int bin_Float(int number_choise) {
 	cout << "Выбрана команда: " << number_choise << "\n\n";
 	union
@@ -103,7 +108,6 @@ int bin_Float(int number_choise) {
 	unsigned int bites = sizeof(int) * 8, mask = 1 << bites - 1;
 	int A1[32] = {};
 	cout << "Введите вещественное число\n";
-	cin >> float_Num;
 
 	while (!(cin >> float_Num)) {
 		cout << "Ошибка, введен неподходящий тип данных\n";
