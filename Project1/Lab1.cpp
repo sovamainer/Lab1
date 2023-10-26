@@ -23,7 +23,7 @@ int bin_Int(int number_choise) {
 	unsigned int bytes = 32, masks = 1 << bytes - 1, int_num;
 	int A1[32] = {};
 	cout << "Введите целое число\n";
-
+// Этот блок кода делает проверку на символ, вводимый пользователем
 	while (!(cin >> int_num)) {
 		cout << "Ошибка, введен неподходящий тип данных\n";
 		cin.clear();
