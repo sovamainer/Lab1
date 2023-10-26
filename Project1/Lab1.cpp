@@ -3,7 +3,7 @@
 #include <ctype.h>
 #include <iomanip>
 using namespace std;
-
+// Функция для вывода размерности типов данных на экран
 int sizes(int number_choise) {
 	cout << "Выбрана команда: " << number_choise << "\n\n";
 	cout << "int: " << sizeof(int) << "\n";
@@ -17,7 +17,7 @@ int sizes(int number_choise) {
 	return 0;
 }
 
-
+// Функция для перевода числа типа int в двоичную систему счисления(с учетом ИДЗ)
 int bin_Int(int number_choise) {
 	cout << "Выбрана команда: " << number_choise << "\n\n";
 	unsigned int bytes = 32, masks = 1 << bytes - 1, int_num;
@@ -92,7 +92,7 @@ int bin_Int(int number_choise) {
 	}
 	return 0;
 }
-
+// Функция для перевода числа типа float в двоичную систему счисления(с учетом ИДЗ)
 int bin_Float(int number_choise) {
 	cout << "Выбрана команда: " << number_choise << "\n\n";
 	union
@@ -177,7 +177,7 @@ int bin_Float(int number_choise) {
 
 
 
-
+// Главное тело программы
 int main()
 {
 	double number = 1;
